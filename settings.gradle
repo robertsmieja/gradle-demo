@@ -1,0 +1,4 @@
+include 'projectA', 'projectB'
+//Alternatively:
+//include 'projectA'
+//include 'projectB'

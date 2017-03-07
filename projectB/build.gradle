@@ -1,0 +1,7 @@
+dependencies {
+    compile project(':projectA')
+}
+
+helloWorld {
+    value = "${System.env.HELLO_WORLD}" ?: 'COPJava'
+}
