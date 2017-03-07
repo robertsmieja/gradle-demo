@@ -1,15 +1,17 @@
-apply plugin: 'eclipse'
-apply plugin: 'helloWorld'
-apply plugin: 'java'
+allprojects {
+    apply plugin: 'eclipse'
+    apply plugin: 'helloWorld'
+    apply plugin: 'java'
 
-helloWorld {
-    value = System.env.HELLO_WORLD ?: value
-}
+    helloWorld {
+        value = System.env.HELLO_WORLD ?: value
+    }
 
-repositories {
-    mavenCentral()
-}
+    repositories {
+        mavenCentral()
+    }
 
-dependencies {
-    testCompile 'junit:junit:4.12'
+    dependencies {
+        testCompile 'junit:junit:4.12'
+    }
 }
