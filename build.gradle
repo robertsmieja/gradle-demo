@@ -1,7 +1,10 @@
 apply plugin: 'eclipse'
+apply plugin: 'helloWorld'
 apply plugin: 'java'
 
-ext.helloWorldValue = System.env.HELLO_WORLD ?: 'world'
+helloWorld {
+    value = System.env.HELLO_WORLD ?: value
+}
 
 repositories {
     mavenCentral()
@@ -9,10 +12,4 @@ repositories {
 
 dependencies {
     testCompile 'junit:junit:4.12'
-}
-
-task helloWorld {
-    doLast {
-        println "Hello $helloWorldValue!"
-    }
 }
