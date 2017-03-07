@@ -1,6 +1,8 @@
 apply plugin: 'eclipse'
 apply plugin: 'java'
 
+ext.helloWorldValue = System.env.HELLO_WORLD ?: 'world'
+
 repositories {
     mavenCentral()
 }
@@ -10,8 +12,7 @@ dependencies {
 }
 
 task helloWorld {
-    def value = 'world'
     doLast {
-        println "Hello $value!"
+        println "Hello $helloWorldValue!"
     }
 }
