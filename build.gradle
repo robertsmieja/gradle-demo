@@ -8,3 +8,10 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.12'
 }
+
+task helloWorld {
+    def value = 'world'
+    doLast {
+        println "Hello $value!"
+    }
+}
